@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center flex-col p-6">
-      <div>
+      <h1>Home Page</h1>
+
+      {/* <div>
         <h1 className="text-3xl font-bold">Título Principal</h1>
         <h2 className="text-2xl font-semibold">Título Secundário</h2>
         <h3 className="text-xl font-semibold">Título Menor</h3>
@@ -39,7 +41,7 @@ export default function Home() {
         >
           Ver projetos →
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
