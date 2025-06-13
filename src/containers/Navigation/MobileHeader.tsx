@@ -5,7 +5,7 @@ import * as I from "./Navigation.interface";
 
 export const MobileHeader = ({ links, contatos }: I.NavigationProps) => {
   return (
-    <header className="relative flex h-16 items-center border-b border-gray-700 px-2.5 md:hidden">
+    <header className="flex h-16 w-full items-center border-b border-gray-700 px-2.5 md:hidden">
       <div className="flex flex-1 items-center gap-3">
         <Image
           src={"/images/foto-perfil.png"}
