@@ -1,7 +1,7 @@
 import { Contact } from "@/models/contatos";
-import { LinkNavegacao } from "@/models/linksNavegacao";
+import { LinkNavigation } from "@/models/linksNavegacao";
 
 export interface NavigationProps {
-  links: LinkNavegacao[];
+  links: LinkNavigation[];
   contatos: Contact[];
 }

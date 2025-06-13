@@ -1,0 +1,7 @@
+[
+  { "id": 1, "label": "Home", "href": "/" },
+  { "id": 2, "label": "Sobre", "href": "/sobre" },
+  { "id": 3, "label": "Projetos", "href": "/projetos" },
+  { "id": 4, "label": "Curiosidades", "href": "/curiosidades" },
+  { "id": 5, "label": "Contato", "href": "/contato" }
+]
