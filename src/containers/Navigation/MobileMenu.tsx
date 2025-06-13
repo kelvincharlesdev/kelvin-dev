@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Popover,
   PopoverButton,
@@ -5,10 +7,10 @@ import {
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import Link from "next/link";
+
 import { AnimateButton } from "@/components/AnimateButton";
+
 import * as I from "./Navigation.interface";
-import { usePathname } from "next/navigation";
 
 export const MobileMenu = ({ links, contatos }: I.NavigationProps) => {
   const pathName = usePathname();
