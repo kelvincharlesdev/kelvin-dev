@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+html {
+  @apply scroll-smooth;
+}
+
 body {
+  @apply bg-gray-900 text-gray-100 min-h-screen;
   font-family: var(--font-inter), sans-serif;
 }
