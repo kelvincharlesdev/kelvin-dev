@@ -1,6 +1,3 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import {
   Popover,
   PopoverButton,
@@ -10,14 +7,16 @@ import {
 } from "@headlessui/react";
 
 import { AnimateButton } from "@/components/AnimateButton";
-
-import * as I from "./Navigation.interface";
 import { NavItems } from "@/containers/NavItems/NavItems";
+
 import { ContactLinks } from "../ContactLinks";
+import * as I from "./Navigation.interface";
 
-export const MobileMenu = ({ links, contatos }: I.NavigationProps) => {
-  const pathName = usePathname();
-
+export const MobileMenu = ({
+  links,
+  contacts,
+  pathName,
+}: I.NavigationProps) => {
   return (
     <Popover className="">
       <div className="border border-gray-700">
@@ -40,7 +39,7 @@ export const MobileMenu = ({ links, contatos }: I.NavigationProps) => {
               <>
                 <NavItems links={links} pathName={pathName} close={close} />
 
-                <ContactLinks contacts={contatos} />
+                <ContactLinks contacts={contacts} />
               </>
             )}
           </PopoverPanel>

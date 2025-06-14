@@ -3,5 +3,6 @@ import { LinkNavigation } from "@/models/linksNavegacao";
 
 export interface NavigationProps {
   links: LinkNavigation[];
-  contatos: Contact[];
+  contacts: Contact[];
+  pathName: string;
 }
