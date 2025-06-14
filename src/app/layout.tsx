@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { MobileHeader } from "@/content/Global/Navigation/section";
+import { MobileHeader, SideBar } from "@/content/Global/Navigation/section";
 
 import "./globals.css";
 
@@ -26,7 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <MobileHeader />
-        <main>{children}</main>
+
+        <main className="flex min-h-screen w-full flex-col md:flex-row">
+          <SideBar />
+          <section className="flex-1">{children}</section>
+        </main>
       </body>
     </html>
   );
