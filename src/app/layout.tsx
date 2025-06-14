@@ -29,7 +29,7 @@ export default function RootLayout({
 
         <main className="flex min-h-screen w-full flex-col md:flex-row">
           <SideBar />
-          <section className="flex-1">{children}</section>
+          <div className="flex-1 px-5 md:px-10">{children}</div>
         </main>
       </body>
     </html>
