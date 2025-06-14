@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+
 import { usePathname } from "next/navigation";
 import {
   Popover,
@@ -11,6 +12,8 @@ import {
 import { AnimateButton } from "@/components/AnimateButton";
 
 import * as I from "./Navigation.interface";
+import { NavItems } from "@/containers/NavItems/NavItems";
+import { ContactLinks } from "../ContactLinks";
 
 export const MobileMenu = ({ links, contatos }: I.NavigationProps) => {
   const pathName = usePathname();
@@ -35,44 +38,9 @@ export const MobileMenu = ({ links, contatos }: I.NavigationProps) => {
           <PopoverPanel className="absolute top-[58px] right-[-1px] z-50 mt-2 flex min-w-[60vw] flex-col rounded-l-lg bg-gray-800 p-4 shadow-lg">
             {({ close }) => (
               <>
-                <ul className="flex flex-1 flex-col gap-2">
-                  {links?.map((link) => (
-                    <li
-                      key={link.id}
-                      className={`rounded-lg border-b border-gray-600 p-2 text-sm text-gray-100 transition-colors last:border-b-0 hover:bg-gray-700 ${
-                        pathName === link.href ? "bg-gray-700" : ""
-                      }`}
-                    >
-                      <Link
-                        href={link.href}
-                        className="flex w-full text-gray-100"
-                        onClick={() => close()}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <NavItems links={links} pathName={pathName} close={close} />
 
-                <div className="mt-20">
-                  <h1 className="flex border-b border-gray-600 pb-2 text-xs text-gray-300">
-                    Conecte-se comigo
-                  </h1>
-                  <ul className="mt-4 flex items-center gap-2">
-                    {contatos?.map((contato) => (
-                      <li key={contato.id}>
-                        <Link
-                          href={contato.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex rounded-lg border border-gray-700 p-2 text-gray-100 transition-transform hover:scale-110 hover:border-blue-600"
-                        >
-                          {contato.icon && <contato.icon />}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ContactLinks contacts={contatos} />
               </>
             )}
           </PopoverPanel>
