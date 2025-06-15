@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
-import { MobileHeader, SideBar } from "@/content/global/Navigation";
+import { MobileHeader, SideBar } from "@/content/globals/Navigation";
 
 import "./globals.css";
 
