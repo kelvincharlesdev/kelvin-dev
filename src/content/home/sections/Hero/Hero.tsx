@@ -20,7 +20,7 @@ export const Hero = () => {
           </p>
 
           <div className="mt-6 flex gap-4">
-            <Link href="/contatos">
+            <Link href="/contato">
               <Button>Contatos</Button>
             </Link>
             <Link href="/sobre">
