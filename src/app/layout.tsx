@@ -27,9 +27,11 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <MobileHeader />
 
-        <main className="flex min-h-screen w-full flex-col md:flex-row">
+        <main className="flex min-h-screen w-full md:flex-row">
           <SideBar />
-          <div className="flex-1 px-5 md:px-10">{children}</div>
+          <div className="flex flex-1 justify-center px-5 md:px-10">
+            <div className="w-full max-w-[1440px]">{children}</div>
+          </div>
         </main>
       </body>
     </html>
