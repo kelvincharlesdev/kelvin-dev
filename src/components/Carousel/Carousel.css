@@ -1,0 +1,17 @@
+.swiper {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+}
