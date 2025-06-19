@@ -1,9 +1,12 @@
+"use client";
+
+import Link from "next/link";
+
 import { Button } from "@/components/Button";
 import { Title } from "@/components/Title";
 import { ProjectsList as ProjectListContainer } from "@/containers/ProjectsList";
 
 import { projects } from "@/data/projects";
-import Link from "next/link";
 
 export const ProjectsList = () => {
   const recentProjects = projects.slice(0, 3);

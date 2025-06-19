@@ -24,15 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} overflow-hidden antialiased`}>
         <MobileHeader />
 
-        <main className="flex min-h-screen w-full md:flex-row">
+        <div className="flex h-screen w-full md:flex-row">
           <SideBar />
-          <div className="flex flex-1 justify-center px-5 md:px-10">
-            <div className="w-full max-w-[1440px]">{children}</div>
-          </div>
-        </main>
+          <main className="flex-1 overflow-y-auto px-5 md:px-10">
+            <div className="mx-auto w-full max-w-[1440px]">{children}</div>
+          </main>
+        </div>
       </body>
     </html>
   );
