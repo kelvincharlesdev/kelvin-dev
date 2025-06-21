@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import { MobileHeader, SideBar } from "@/content/globals/Navigation";
+import { Footer } from "@/content/globals/Footer";
 
 import "./globals.css";
 
@@ -24,14 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} overflow-hidden antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <MobileHeader />
 
         <div className="flex h-screen w-full md:flex-row">
           <SideBar />
-          <main className="flex-1 overflow-y-auto px-5 md:px-10">
-            <div className="mx-auto w-full max-w-[1440px]">{children}</div>
-          </main>
+
+          <div className="flex-1 overflow-y-auto px-5 md:px-10">
+            <main className="mx-auto w-full max-w-[1440px]">{children}</main>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
