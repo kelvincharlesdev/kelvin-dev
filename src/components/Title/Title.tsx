@@ -4,6 +4,7 @@ const sizeMap = {
   h1: "text-3xl md:text-5xl", //30px-48px
   h2: "text-xl md:text-4xl", //20-36px
   h3: "text-lg md:text-2xl", //18-24px
+  h4: "text-sm md:text-base", //14-16px
 };
 
 export const Title = ({
