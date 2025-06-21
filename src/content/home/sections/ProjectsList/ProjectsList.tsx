@@ -11,7 +11,7 @@ import { projects } from "@/data/projects";
 export const ProjectsList = () => {
   const recentProjects = projects.slice(0, 3);
   return (
-    <div className="mt-6 flex flex-col md:mt-8 md:space-y-6">
+    <section className="mt-6 flex flex-col md:mt-8 md:space-y-6">
       <div className="flex items-center justify-between">
         <Title as="h3">Projetos</Title>
         <Link href="/projetos">
@@ -20,6 +20,6 @@ export const ProjectsList = () => {
       </div>
 
       <ProjectListContainer projects={recentProjects} />
-    </div>
+    </section>
   );
 };
