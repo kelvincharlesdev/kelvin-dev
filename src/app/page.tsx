@@ -1,5 +1,4 @@
-import { Hero, ProjectsList } from "@/content/home";
-import { StacksList } from "@/content/home/sections/StacksLink/StacksLink";
+import { Hero, ProjectsList, StacksList } from "@/content/home";
 
 export default function Home() {
   return (
