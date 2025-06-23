@@ -1,7 +1,8 @@
 [
   { "id": 1, "label": "Home", "href": "/" },
   { "id": 2, "label": "Sobre", "href": "/sobre" },
-  { "id": 3, "label": "Projetos", "href": "/projetos" },
-  { "id": 4, "label": "Curiosidades", "href": "/curiosidades" },
-  { "id": 5, "label": "Contato", "href": "/contato" }
+  { "id": 3, "label": "Formações Acadêmicas", "href": "/formacoes-academicas" },
+  { "id": 4, "label": "Projetos", "href": "/projetos" },
+  { "id": 5, "label": "Curiosidades", "href": "/curiosidades" },
+  { "id": 6, "label": "Contato", "href": "/contato" }
 ]
