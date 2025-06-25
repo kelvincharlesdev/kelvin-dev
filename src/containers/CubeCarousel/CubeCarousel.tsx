@@ -6,6 +6,7 @@ import { Swiper } from "swiper/react";
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 
 import * as I from "./CubeCarousel.interface";
+import "./CubeCarousel.css";
 
 export const CubeCarousel = ({ children }: I.CubeCarouselProps) => {
   return (
@@ -26,7 +27,7 @@ export const CubeCarousel = ({ children }: I.CubeCarouselProps) => {
         loop={true}
         pagination={true}
         modules={[EffectCube, Pagination, Autoplay]}
-        className="h-[320px] w-[320px]"
+        className="h-[300px] w-[300px]"
       >
         {children}
       </Swiper>
