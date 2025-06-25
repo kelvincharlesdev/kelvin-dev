@@ -4,7 +4,7 @@ import { professionalExperience } from "@/data/professionalExperience";
 
 export const ProfessionalExperience = () => {
   return (
-    <div className="mt-15">
+    <div className="mt-22">
       <Title as="h3">Experiência Profissional</Title>
       <div className="mt-2">
         <ExperienceList experiences={professionalExperience} />

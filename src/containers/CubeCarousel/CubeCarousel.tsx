@@ -17,14 +17,14 @@ export const CubeCarousel = ({ children }: I.CubeCarouselProps) => {
         cubeEffect={{
           shadow: true,
           slideShadows: true,
-          shadowOffset: 20,
+          shadowOffset: 40,
           shadowScale: 0.94,
         }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
+        // autoplay={{
+        //   delay: 2000,
+        //   disableOnInteraction: false,
+        // }}
+        // loop={true}
         pagination={true}
         modules={[EffectCube, Pagination, Autoplay]}
         className="h-[300px] w-[300px]"
