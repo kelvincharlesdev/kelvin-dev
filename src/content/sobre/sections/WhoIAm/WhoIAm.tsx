@@ -39,20 +39,20 @@ export const WhoIAm = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className="mt-10 flex items-center justify-center xl:mt-0">
         <CubeCarousel>
           {family.map((src, index) => (
             <SwiperSlide
               key={index}
               className="flex items-center justify-center"
             >
-              <div className="h-[280px] w-[280px] overflow-hidden rounded-xl bg-neutral-900 shadow-lg">
+              <div className="w-[300px]overflow-hidden h-[300px] rounded-xl bg-neutral-900 shadow-lg">
                 <Image
                   src={src}
                   alt={`Foto ${index + 1}`}
-                  width={280}
-                  height={280}
-                  className="h-full w-full object-cover"
+                  width={300}
+                  height={300}
+                  className="h-full w-full rounded-xl object-cover"
                 />
               </div>
             </SwiperSlide>
