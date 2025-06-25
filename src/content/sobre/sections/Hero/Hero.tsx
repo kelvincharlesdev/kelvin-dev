@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <HeroSobre>
-      <Title className="text-gray-400">Olá, sou Kelvin &#128075;</Title>
+      <Title>Sobre</Title>
 
       <div className="mt-10 flex gap-4">
         <Link href="/contato">
