@@ -1,4 +1,9 @@
-import { Hero, ProfessionalExperience, WhoIAm } from "@/content/sobre";
+import {
+  Hero,
+  ProfessionalExperience,
+  StacksList,
+  WhoIAm,
+} from "@/content/sobre";
 
 export default function SobrePage() {
   return (
@@ -6,6 +11,7 @@ export default function SobrePage() {
       <Hero />
       <WhoIAm />
       <ProfessionalExperience />
+      <StacksList />
     </>
   );
 }
