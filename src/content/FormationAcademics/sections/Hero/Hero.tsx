@@ -7,7 +7,7 @@ import { Hero as HeroContainer } from "@/containers/Hero";
 export const Hero = () => {
   return (
     <HeroContainer>
-      <Title className="text-gray-400">Formações Acadêmicas</Title>
+      <Title>Formações Acadêmicas</Title>
 
       <div className="mt-6 flex gap-4">
         <Link href="/contato">
