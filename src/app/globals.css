@@ -1,10 +1,23 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 html {
   @apply scroll-smooth;
 }
 
 body {
-  @apply bg-gray-900 text-gray-100 min-h-screen;
+  @apply min-h-screen bg-gray-900 text-gray-100;
   font-family: var(--font-inter), sans-serif;
+}
+
+.dashed-custom {
+  border: 1px dashed #364153;
+  border-image: repeating-linear-gradient(
+      to bottom,
+      #364153 0px,
+      #364153 6px,
+      transparent 6px,
+      transparent 12px
+    )
+    1;
+  border-width: 1px;
 }
