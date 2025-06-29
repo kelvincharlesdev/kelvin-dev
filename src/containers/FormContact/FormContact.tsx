@@ -1,8 +1,8 @@
-import Input from "@/components/Input";
-
 import { LuCircleUserRound, LuMail } from "react-icons/lu";
 
 import { Button } from "@/components/Button";
+import Input from "@/components/Input";
+
 import * as I from "./FormContact.interface";
 
 export const FormContact = ({
