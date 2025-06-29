@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 
 import { MobileHeader, SideBar } from "@/content/globals/Navigation";
 import { Footer } from "@/content/globals/Footer";
 
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.variable} antialiased`}>
+        <ToastContainer />
         <MobileHeader />
 
         <div className="flex h-screen w-full md:flex-row">
