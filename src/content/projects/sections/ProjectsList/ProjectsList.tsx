@@ -5,7 +5,7 @@ import { LuSearch } from "react-icons/lu";
 
 import { useDebounce } from "@/hooks";
 
-import { Input } from "@/components/Input";
+import Input from "@/components/Input";
 import { ProjectsListPage } from "@/containers/ProjectsListPage";
 
 import { projects } from "@/data/projects";
@@ -33,13 +33,17 @@ export const ProjectsList = () => {
 
   return (
     <div className="mt-8">
-      <Input
-        label="Pesquisar projetos por nome ou tecnologia:"
-        icon={<LuSearch className="text-gray-400" />}
-        value={inputValue}
-        onChange={onChange}
-        placeholder="Pesquisar ..."
-      />
+      <div className="max-w-[300px]">
+        <Input.Wrapper>
+          <Input.Label label="Pesquisar projetos por nome ou tecnologia:" />
+          <Input.Field
+            value={inputValue}
+            onChange={onChange}
+            placeholder="Pesquisar ..."
+            icon={<LuSearch className="cursor-pointer text-gray-400" />}
+          />
+        </Input.Wrapper>
+      </div>
 
       <div className="mt-4 min-h-[calc(100vh-385px)]">
         {filteredProjects.length === 0 ? (
