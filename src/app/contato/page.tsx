@@ -1,4 +1,4 @@
-import { ContactLinks, Form, Hero } from "@/content/contact";
+import { ContactLinks, FAQ, Form, Hero } from "@/content/contact";
 
 export default function ContatoPage() {
   return (
@@ -8,6 +8,7 @@ export default function ContatoPage() {
         <Form />
         <ContactLinks />
       </div>
+      <FAQ />
     </>
   );
 }
