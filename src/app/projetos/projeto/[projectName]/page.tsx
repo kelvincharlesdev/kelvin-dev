@@ -4,10 +4,16 @@ import { notFound } from "next/navigation";
 import { Hero, Project, ProjectsList } from "@/content/project";
 import { projects } from "@/data/projects";
 
-export async function generateMetadata(props: {
-  params: { projectName: string };
-}): Promise<Metadata> {
-  const { projectName } = await Promise.resolve(props.params);
+interface PageProps {
+  params: Promise<{
+    projectName: string;
+  }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { projectName } = await params; // ✅ Agora com await
   const project = projects.find((proj) => proj.slug === projectName);
 
   return {
@@ -15,12 +21,8 @@ export async function generateMetadata(props: {
   };
 }
 
-export default async function ProjectIdPage({
-  params,
-}: {
-  params: { projectName: string };
-}) {
-  const { projectName } = await Promise.resolve(params);
+export default async function ProjectIdPage({ params }: PageProps) {
+  const { projectName } = await params; // ✅ Agora com await
   const project = projects.find((proj) => proj.slug === projectName);
 
   if (!project) {
@@ -43,8 +45,7 @@ export default async function ProjectIdPage({
         linkGithub={project.linkGithub}
         linkDeploy={project.linkDeploy}
       />
-
-      <ProjectsList title={"Ver mais projetos"} projectActual={projectName} />
+      <ProjectsList title="Ver mais projetos" projectActual={projectName} />
     </>
   );
 }
