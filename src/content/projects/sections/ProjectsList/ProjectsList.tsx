@@ -25,7 +25,7 @@ export const ProjectsList = () => {
     const matchesTitle = project.title.toLowerCase().includes(inputText);
 
     const matchesTechnology = project.technologies?.some((tech) =>
-      tech.toLowerCase().includes(inputText),
+      tech.label.toLowerCase().includes(inputText),
     );
 
     return matchesTitle || matchesTechnology;
