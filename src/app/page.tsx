@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ProjectsList />
+      <ProjectsList title={"Projetos"} />
       <StacksList />
     </>
   );
