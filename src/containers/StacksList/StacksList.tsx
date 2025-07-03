@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-import { StackCard } from "@/containers/StackCard";
+import { Title } from "@/components/Title";
+import Card from "@/components/Card";
+import StackCard from "@/containers/StackCard";
+
 import * as I from "./StacksList.interface";
 
 export const StacksList = ({ stacks }: I.StacksListProps) => {
@@ -10,13 +13,17 @@ export const StacksList = ({ stacks }: I.StacksListProps) => {
         (stack) =>
           stack.link && (
             <Link key={stack.id} href={stack.link} target="_blank">
-              <StackCard
-                id={stack.id}
-                icon={stack.icon}
-                label={stack.label}
-                title={stack.title}
-                link={stack.link}
-              />
+              <Card.Wrapper>
+                <StackCard.Container>
+                  <StackCard.Icon icon={stack.icon} />
+                  <StackCard.Info>
+                    <Title as="h4">{stack.title}</Title>
+                    <p className="truncate text-xs text-gray-300 md:text-sm">
+                      {stack.label}
+                    </p>
+                  </StackCard.Info>
+                </StackCard.Container>
+              </Card.Wrapper>
             </Link>
           ),
       )}
