@@ -15,7 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kelvin Charles",
+  title: {
+    default: "Kelvin Charles",
+    template: "Kelvin Charles | %s",
+  },
   description:
     "Portfólio de Kelvin Charles, Desenvolvedor Front-End focado em criar experiências digitais modernas, responsivas e acessíveis.",
 };
