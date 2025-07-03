@@ -24,7 +24,7 @@ export const CarouselProjects = ({ projects }: I.ProjectsListProps) => {
             className="flex justify-center rounded-lg bg-blue-500"
           >
             <div key={project.id} className="h-[280px]">
-              <Link href={project.link}>
+              <Link href={`/projetos/projeto/${project.slug}`}>
                 <Card.Wrapper>
                   <Card.ImageBackground imageUrl={project.image} />
                   <Card.Footer>

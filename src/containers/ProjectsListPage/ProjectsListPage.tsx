@@ -9,7 +9,7 @@ export const ProjectsListPage = ({ projects }: I.ProjectsListPageProps) => {
     <ul className="grid gap-8 rounded-lg border-1 border-gray-700 p-4 lg:grid-cols-2">
       {projects.map((project) => (
         <li key={project.id} className="h-[300px] xl:h-[400px]">
-          <Link href={project.link}>
+          <Link href={`/projetos/projeto/${project.slug}`}>
             <Card.Wrapper>
               <Card.ImageBackground imageUrl={project.image} />
               <Card.Footer>

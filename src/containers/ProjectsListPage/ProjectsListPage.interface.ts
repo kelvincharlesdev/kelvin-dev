@@ -1,5 +1,5 @@
-import { Project } from "@/models/projects";
+import { ProjectProps } from "@/models/projects";
 
 export interface ProjectsListPageProps {
-  projects: Project[];
+  projects: ProjectProps[];
 }

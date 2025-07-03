@@ -8,7 +8,7 @@ export const ProjectsListDesktop = ({ projects }: I.ProjectsListProps) => {
     <ul className="hidden gap-8 rounded-lg border-1 border-gray-700 p-4 lg:grid lg:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
       {projects.map((project) => (
         <li key={project.id} className="h-[280px]">
-          <Link href={project.link}>
+          <Link href={`/projetos/projeto/${project.slug}`}>
             <Card.Wrapper>
               <Card.ImageBackground imageUrl={project.image} />
               <Card.Footer>
