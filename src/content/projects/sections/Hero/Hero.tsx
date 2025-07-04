@@ -13,8 +13,8 @@ export const Hero = () => {
           <Link href="/contato">
             <Button>Contatos</Button>
           </Link>
-          <Link href="/curiosidades">
-            <Button>Curiosidades</Button>
+          <Link href="/formacoes-academicas">
+            <Button>Formações Acadêmicas</Button>
           </Link>
         </div>
       </HeroProjects>
